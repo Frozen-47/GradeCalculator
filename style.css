@@ -398,8 +398,14 @@ select option {
 
 input[type="number"]::-webkit-inner-spin-button,
 input[type="number"]::-webkit-outer-spin-button {
+    opacity: 0.5;
+    background: transparent;
+}
+
+input[type="number"]::-webkit-inner-spin-button:hover,
+input[type="number"]::-webkit-outer-spin-button:hover {
     opacity: 1;
-    filter: invert(1);
+    background: transparent;
 }
 
 .footer {
