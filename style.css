@@ -251,6 +251,7 @@ body::before {
 .course-inputs {
     display: flex;
     gap: 0.5rem;
+    align-items: stretch;
 }
 
 .course-input {
@@ -263,12 +264,23 @@ body::before {
     font-size: 0.8125rem;
     font-family: inherit;
     transition: all 0.2s ease;
+    min-width: 0;
 }
 
 .course-input:focus {
     outline: none;
     border-color: #c5c5c5;
     background: #30363d;
+}
+
+.course-input[type="number"] {
+    max-width: 120px;
+}
+
+select.course-input {
+    flex: 1;
+    max-width: 140px;
+    cursor: pointer;
 }
 
 .add-btn {
@@ -362,6 +374,15 @@ body::before {
 
     .tabs {
         flex-direction: column;
+    }
+
+    .course-inputs {
+        flex-direction: column;
+    }
+
+    .course-input[type="number"],
+    select.course-input {
+        max-width: 100%;
     }
 }
 
