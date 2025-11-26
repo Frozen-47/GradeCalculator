@@ -379,3 +379,28 @@ input[type="number"]::-webkit-inner-spin-button,
 input[type="number"]::-webkit-outer-spin-button {
     opacity: 1;
 }
+
+.footer {
+    margin-top: 3rem;
+    padding: 2rem 1rem;
+    text-align: center;
+    border-top: 1px solid #21262d;
+}
+
+.footer-text {
+    color: #8d96a0;
+    font-size: 0.875rem;
+    line-height: 1.6;
+}
+
+.resume-link {
+    color: #f0f6fc;
+    text-decoration: none;
+    transition: all 0.2s ease;
+    border-bottom: 1px solid transparent;
+}
+
+.resume-link:hover {
+    color: #ffffff;
+    border-bottom-color: #ffffff;
+}
