@@ -404,3 +404,33 @@ input[type="number"]::-webkit-outer-spin-button {
     color: #ffffff;
     border-bottom-color: #ffffff;
 }
+
+.seo-content {
+    color: #8d96a0;
+    line-height: 1.8;
+}
+
+.seo-content p {
+    margin-bottom: 1rem;
+}
+
+.seo-content h3 {
+    color: #f0f6fc;
+    font-size: 1rem;
+    font-weight: 600;
+    margin-top: 1.5rem;
+    margin-bottom: 0.75rem;
+}
+
+.seo-content ul {
+    margin-left: 1.5rem;
+    margin-bottom: 1rem;
+}
+
+.seo-content li {
+    margin-bottom: 0.5rem;
+}
+
+.seo-content strong {
+    color: #f0f6fc;
+}
