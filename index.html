@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GPA & CGPA Calculator</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div class="main">
+        <div class="hero">
+            <h1>📊 GPA & CGPA Calculator</h1>
+            <p class="subtitle">Track your academic performance across all semesters</p>
+        </div>
+
+        <div class="tabs">
+            <button class="tab active" data-tab="gpa">Calculate GPA</button>
+            <button class="tab" data-tab="cgpa">Calculate CGPA</button>
+            <button class="tab" data-tab="converter">GPA to CGPA</button>
+        </div>
+
+        <!-- GPA Calculator Tab -->
+        <div class="tab-content active" id="gpa">
+            <div class="section">
+                <div class="section-header">
+                    <h2 class="section-title">Semester GPA</h2>
+                </div>
+                <div class="result-display">
+                    <div class="result-label">Your GPA</div>
+                    <div class="result-value" id="gpaValue">0.00</div>
+                    <div class="result-label" style="margin-top: 1rem; font-size: 0.75rem;">
+                        <span id="gpaCredits">0</span> Credits
+                    </div>
+                </div>
+            </div>
+
+            <div class="semester-card">
+                <div id="gpaCourses"></div>
+                <button class="add-btn" id="addGpaCourse">+ Add Course</button>
+            </div>
+        </div>
+
+        <!-- CGPA Calculator Tab -->
+        <div class="tab-content" id="cgpa">
+            <div class="section">
+                <div class="section-header">
+                    <h2 class="section-title">Cumulative GPA (CGPA)</h2>
+                </div>
+                <div class="result-display">
+                    <div class="result-label">Overall Performance</div>
+                    <div class="result-value" id="cgpaValue">0.00</div>
+                    <div class="result-label" style="margin-top: 1rem; font-size: 0.75rem;">
+                        <span id="totalCredits">0</span> Total Credits
+                    </div>
+                </div>
+            </div>
+
+            <div id="semestersGrid"></div>
+            <button class="add-btn" id="addSemesterBtn">+ Add Semester</button>
+        </div>
+
+        <!-- GPA to CGPA Converter Tab -->
+        <div class="tab-content" id="converter">
+            <div class="section">
+                <div class="section-header">
+                    <h2 class="section-title">Convert GPA to CGPA</h2>
+                </div>
+                <div class="result-display">
+                    <div class="result-label">Calculated CGPA</div>
+                    <div class="result-value" id="convertedCgpa">0.00</div>
+                </div>
+            </div>
+
+            <div class="section">
+                <div class="section-header">
+                    <h2 class="section-title">Enter Semester GPAs</h2>
+                </div>
+                <div id="gpaInputs"></div>
+                <button class="add-btn" id="addGpaInput">+ Add Semester GPA</button>
+            </div>
+        </div>
+
+        <!-- Grade Scale Reference -->
+        <div class="section">
+            <div class="section-header">
+                <h2 class="section-title">Grade Scale Reference</h2>
+            </div>
+            <div class="grade-scale">
+                <div class="grade-item"><span class="grade-badge">O</span><span class="grade-value"> = 10</span></div>
+                <div class="grade-item"><span class="grade-badge">A+</span><span class="grade-value"> = 9</span></div>
+                <div class="grade-item"><span class="grade-badge">A</span><span class="grade-value"> = 8</span></div>
+                <div class="grade-item"><span class="grade-badge">B+</span><span class="grade-value"> = 7</span></div>
+                <div class="grade-item"><span class="grade-badge">B</span><span class="grade-value"> = 6</span></div>
+                <div class="grade-item"><span class="grade-badge">C</span><span class="grade-value"> = 5</span></div>
+                <div class="grade-item"><span class="grade-badge">RA</span><span class="grade-value"> = 0</span></div>
+                <div class="grade-item"><span class="grade-badge">SA</span><span class="grade-value"> = 0</span></div>
+                <div class="grade-item"><span class="grade-badge">W</span><span class="grade-value"> = 0</span></div>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
