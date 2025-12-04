@@ -1,12 +1,9 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    
-    <!-- Primary Meta Tags -->
     <title>GPA & CGPA Calculator - Track Your Academic Performance</title>
     <meta name="title" content="GPA & CGPA Calculator - Track Your Academic Performance">
     <meta name="description" content="Free online GPA and CGPA calculator to track your academic performance. Calculate semester GPA, cumulative CGPA, and convert between different grading systems easily.">
@@ -14,40 +11,24 @@
     <meta name="author" content="Sabareesh">
     <meta name="robots" content="index, follow">
     <meta name="google-site-verification" content="YO1pZ3TKEhvJA9VAY1qdyaKvStImF_uMVqCd45supmk" />
-    
-    <!-- Open Graph / Facebook -->
     <meta property="og:type" content="website">
     <meta property="og:url" content="https://getgpa.vercel.app/">
     <meta property="og:title" content="GPA & CGPA Calculator - Track Your Academic Performance">
     <meta property="og:description" content="Free online GPA and CGPA calculator to track your academic performance. Calculate semester GPA, cumulative CGPA, and convert between different grading systems easily.">
     <meta property="og:image" content="https://getgpa.vercel.app/image.png">
-    
-    <!-- Twitter -->
     <meta property="twitter:card" content="summary_large_image">
     <meta property="twitter:url" content="https://getgpa.vercel.app/">
     <meta property="twitter:title" content="GPA & CGPA Calculator - Track Your Academic Performance">
     <meta property="twitter:description" content="Free online GPA and CGPA calculator to track your academic performance. Calculate semester GPA, cumulative CGPA, and convert between different grading systems easily.">
     <meta property="twitter:image" content="https://getgpa.vercel.app/image.png">
-    
-    <!-- Favicon -->
     <link rel="icon" type="image/png" href="image.png">
     <link rel="apple-touch-icon" sizes="180x180" href="image.png">
-    
-    <!-- Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
-    
-    <!-- Stylesheet -->
     <link rel="stylesheet" href="style.css">
-    
-    <!-- Theme Color -->
     <meta name="theme-color" content="#000000">
-    
-    <!-- Canonical URL -->
     <link rel="canonical" href="https://getgpa.vercel.app/">
-    
-    <!-- Schema.org structured data -->
     <script type="application/ld+json">
     {
       "@context": "https://schema.org",
@@ -75,21 +56,17 @@
     }
     </script>
 </head>
-
 <body>
     <div class="main">
         <div class="hero">
             <h1>📊 Free GPA & CGPA Calculator for Indian Universities</h1>
             <p class="subtitle">Track your academic performance across all semesters with 10-point grading scale</p>
         </div>
-
         <div class="tabs">
             <button class="tab active" data-tab="gpa">Calculate GPA</button>
             <button class="tab" data-tab="cgpa">Calculate CGPA</button>
             <button class="tab" data-tab="converter">GPA to CGPA</button>
         </div>
-
-        <!-- GPA Calculator Tab -->
         <div class="tab-content active" id="gpa">
             <div class="section">
                 <div class="section-header">
@@ -103,14 +80,11 @@
                     </div>
                 </div>
             </div>
-
             <div class="semester-card">
                 <div id="gpaCourses"></div>
                 <button class="add-btn" id="addGpaCourse">+ Add Course</button>
             </div>
         </div>
-
-        <!-- CGPA Calculator Tab -->
         <div class="tab-content" id="cgpa">
             <div class="section">
                 <div class="section-header">
@@ -124,12 +98,9 @@
                     </div>
                 </div>
             </div>
-
             <div id="semestersGrid"></div>
             <button class="add-btn" id="addSemesterBtn">+ Add Semester</button>
         </div>
-
-        <!-- GPA to CGPA Converter Tab -->
         <div class="tab-content" id="converter">
             <div class="section">
                 <div class="section-header">
@@ -140,7 +111,6 @@
                     <div class="result-value" id="convertedCgpa">0.00</div>
                 </div>
             </div>
-
             <div class="section">
                 <div class="section-header">
                     <h2 class="section-title">Enter Semester GPAs</h2>
@@ -149,36 +119,29 @@
                 <button class="add-btn" id="addGpaInput">+ Add Semester GPA</button>
             </div>
         </div>
-
-        <!-- Grade Scale Reference -->
         <div class="section">
             <div class="section-header">
                 <h2 class="section-title">Grade Scale Reference</h2>
             </div>
             <div class="grade-scale">
-                <div class="grade-item"><span class="grade-badge">O</span><span class="grade-value"> = 10</span></div>
-                <div class="grade-item"><span class="grade-badge">A+</span><span class="grade-value"> = 9</span></div>
-                <div class="grade-item"><span class="grade-badge">A</span><span class="grade-value"> = 8</span></div>
-                <div class="grade-item"><span class="grade-badge">B+</span><span class="grade-value"> = 7</span></div>
-                <div class="grade-item"><span class="grade-badge">B</span><span class="grade-value"> = 6</span></div>
-                <div class="grade-item"><span class="grade-badge">C</span><span class="grade-value"> = 5</span></div>
-                <div class="grade-item"><span class="grade-badge">RA</span><span class="grade-value"> = 0</span></div>
-                <div class="grade-item"><span class="grade-badge">SA</span><span class="grade-value"> = 0</span></div>
-                <div class="grade-item"><span class="grade-badge">W</span><span class="grade-value"> = 0</span></div>
+                <div class="grade-item"><span class="grade-badge">O</span><span class="grade-value"> = 9.0-10.0</span></div>
+                <div class="grade-item"><span class="grade-badge">D+</span><span class="grade-value"> = 8.0-8.9</span></div>
+                <div class="grade-item"><span class="grade-badge">D</span><span class="grade-value"> = 7.5-7.9</span></div>
+                <div class="grade-item"><span class="grade-badge">A+</span><span class="grade-value"> = 7.0-7.4</span></div>
+                <div class="grade-item"><span class="grade-badge">A</span><span class="grade-value"> = 6.0-6.9</span></div>
+                <div class="grade-item"><span class="grade-badge">B</span><span class="grade-value"> = 5.0-5.9</span></div>
+                <div class="grade-item"><span class="grade-badge">C</span><span class="grade-value"> = 4.0-4.9</span></div>
+                <div class="grade-item"><span class="grade-badge">U</span><span class="grade-value"> = 0.0</span></div>
             </div>
         </div>
-
-        <!-- SEO Content Section -->
         <div class="section">
             <div class="section-header">
                 <h2 class="section-title">How to Calculate Your GPA & CGPA</h2>
             </div>
             <div class="seo-content">
                 <p>Looking for a free 10-point GPA calculator for Indian universities? Our online CGPA calculator helps you track both semester GPA and cumulative CGPA across multiple semesters with ease. Perfect for engineering students, B.Tech, MBA, and all undergraduate programs.</p>
-                
                 <h3>10-Point Grading Scale for Indian Universities</h3>
-                <p>Most Indian universities including IITs, NITs, VIT, SRM, and Anna University use a 10-point grading scale where O (Outstanding) = 10, A+ = 9, A = 8, B+ = 7, B = 6, and C = 5. Our calculator supports this standard grading system used across India. Simply enter your course credits and grades to get instant, accurate GPA and CGPA results.</p>
-                
+                <p>Most Indian universities use a 10-point grading scale where O (Outstanding) = 9.0-10.0, D+ (Excellent) = 8.0-8.9, D (Distinction) = 7.5-7.9, A+ (Very Good) = 7.0-7.4, A (Good) = 6.0-6.9, B (Average) = 5.0-5.9, C (Satisfactory) = 4.0-4.9, and U (Reappear/Absent) = 0.0. Our calculator supports this standard grading system used across India. Simply enter your course credits and grades to get instant, accurate GPA and CGPA results.</p>
                 <h3>Why Use This Free GPA Calculator?</h3>
                 <ul>
                     <li><strong>100% Free:</strong> No registration, no payment, no ads - completely free forever</li>
@@ -189,16 +152,13 @@
                     <li><strong>Mobile Friendly:</strong> Works perfectly on smartphones, tablets, and computers</li>
                     <li><strong>Private & Secure:</strong> All calculations happen in your browser - no data stored</li>
                 </ul>
-                
                 <h3>How to Calculate GPA and CGPA</h3>
-                <p>GPA (Grade Point Average) is calculated by multiplying each course's credit hours by the grade points earned (O=10, A+=9, etc.), then dividing the total grade points by the total credit hours. CGPA (Cumulative Grade Point Average) is calculated the same way but includes all semesters. Our calculator automates this process for Indian university students, ensuring 100% accuracy and saving you time during exam results.</p>
-                
+                <p>GPA (Grade Point Average) is calculated by multiplying each course's credit hours by the grade points earned, then dividing the total grade points by the total credit hours. CGPA (Cumulative Grade Point Average) is calculated the same way but includes all semesters. Our calculator automates this process for Indian university students, ensuring 100% accuracy and saving you time during exam results.</p>
                 <h3>Supported Universities & Colleges</h3>
                 <p>This calculator works for all Indian universities using the 10-point grading system including IIT, NIT, BITS Pilani, VIT, SRM, Anna University, Delhi University, Mumbai University, Pune University, and most engineering colleges across India. Whether you're calculating your semester GPA or overall CGPA for job applications and higher studies, this tool is perfect for you.</p>
             </div>
         </div>
     </div>
-
     <footer class="footer">
         <p class="footer-text">
             Built by Sabareesh. Find me on
@@ -209,8 +169,6 @@
                     class="resume-link">GitHub</a></strong>
         </p>
     </footer>
-
     <script src="script.js"></script>
 </body>
-
 </html>
